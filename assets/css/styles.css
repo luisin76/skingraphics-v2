@@ -1,0 +1,167 @@
+:root {
+  --black: #0b0b0b;
+  --charcoal: #141414;
+  --muted: #9a9a9a;
+  --copper: #8c4a2f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--black);
+  color: white;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.site-header {
+  padding: 24px 0;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 2px;
+  font-size: 1.3rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  margin-left: 32px;
+  font-size: 0.9rem;
+}
+
+.hero {
+  padding: 140px 0;
+}
+
+.hero h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 4.2rem;
+  line-height: 1.05;
+}
+
+.divider {
+  width: 80px;
+  height: 2px;
+  background: var(--copper);
+  margin: 24px 0;
+}
+
+.established {
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.walkins {
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+
+.hero-actions a {
+  margin-right: 16px;
+}
+
+.trust-strip {
+  padding: 20px 0;
+  border-top: 1px solid #1f1f1f;
+  border-bottom: 1px solid #1f1f1f;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.trust-strip span {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--copper);
+  margin: 0 12px;
+}
+
+.work, .artists, .visit {
+  padding: 120px 0;
+}
+
+.work h2,
+.artists h2,
+.visit h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 48px;
+}
+
+.grid {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid img {
+  width: 100%;
+  display: block;
+}
+
+.artist {
+  margin-bottom: 40px;
+}
+
+.artist h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.4rem;
+}
+
+.artist p {
+  color: var(--muted);
+}
+
+.cta {
+  padding: 140px 0;
+  border-top: 1px solid #1f1f1f;
+}
+
+.cta h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.8rem;
+  margin-bottom: 32px;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-outline {
+  border: 1px solid var(--copper);
+  padding: 14px 28px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.btn-primary:hover,
+.btn-outline:hover {
+  background: var(--copper);
+  color: black;
+}
+
+.site-footer {
+  padding: 40px 0;
+  border-top: 1px solid #1f1f1f;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
