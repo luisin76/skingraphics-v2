@@ -4,102 +4,315 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Skin Graphics — Tattoos | San Antonio</title>
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <meta name="description" content="Established San Antonio tattoo studio serving the community since 2004. Walk-ins welcome daily. Custom tattoos available." />
+
+  <!-- Use root-absolute paths so this works on /booking/, /artists/, etc -->
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <link rel="stylesheet" href="./assets/css/components.css" />
+
+  <!-- Fonts (only once) -->
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
+
 <body>
+  <header class="site-header" data-sticky>
+    <div data-include="/partials/header.html"></div>
+  </header>
 
-<header class="site-header">
-  <div class="container header-row">
-    <div class="logo">SKIN GRAPHICS</div>
-    <nav>
-      <a href="#work">Work</a>
-      <a href="#artists">Artists</a>
-      <a href="#visit">Visit</a>
-      <a href="#" class="btn-outline">Book Appointment</a>
-    </nav>
+  <main>
+    <section class="hero" aria-label="Hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="kicker">Serving the community since 2004</p>
+
+          <h1 class="hero-title">
+            TATTOOS<br />
+            SAN ANTONIO
+          </h1>
+
+          <div class="divider"></div>
+
+          <p class="hero-sub">
+            Walk-ins welcome daily <span class="dot" aria-hidden="true"></span> Piercing available
+          </p>
+
+          <div class="hero-actions">
+            <a href="/booking/" class="btn btn-primary">Book appointment</a>
+            <a href="tel:2106456738" class="btn btn-secondary">Call now</a>
+          </div>
+
+          <p class="hero-note">
+            Convenient strip-mall location. Clean, licensed, professional.
+          </p>
+        </div>
+
+        <div class="hero-card" aria-label="Quick info">
+          <div class="hero-card-row">
+            <div>
+              <div class="label">Hours</div>
+              <div class="value">Mon–Sat 12:30–9 · Sun 1–8</div>
+            </div>
+          </div>
+
+          <div class="hero-card-row">
+            <div>
+              <div class="label">Phone</div>
+              <div class="value"><a href="tel:2106456738">(210) 645-6738</a></div>
+            </div>
+          </div>
+
+          <div class="hero-card-row">
+            <div>
+              <div class="label">Address</div>
+              <div class="value">1255 SW Loop 410, Suite 140​ San Antonio, TX 78227</div>
+            </div>
+          </div>
+
+          <a class="hero-card-cta" href="https://maps.app.goo.gl/cpAtWMRXWH6UPL5j7" target="_blank" rel="noopener">
+            Get directions →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-bar">
+      <div class="container trust-row">
+        <div class="trust-item">⭐ 5-Star Rated in San Antonio</div>
+        <div class="trust-item">🧼 Licensed & Health-Inspected</div>
+        <div class="trust-item">🎨 Custom Tattoo Specialists</div>
+        <div class="trust-item">📍 Walk-Ins Welcome</div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Trust strip">
+      <div class="container trust-inner">
+        <span>Licensed artists</span><i></i>
+        <span>Clean environment</span><i></i>
+        <span>Walk-ins daily</span><i></i>
+        <span>Established 2004</span>
+      </div>
+    </section>
+
+    <section id="work" class="section work">
+      <div class="container">
+        <div class="section-head">
+          <h2>RECENT WORK</h2>
+          <p>Fresh work from the studio — tattoos first, always.</p>
+        </div>
+
+        <div class="masonry">
+          <a class="tile tall" href="#" aria-label="View work image 1">
+            <img src="./assets/images/work/james-rivera/01.png" alt="Recent tattoo work" loading="lazy" />
+          </a>
+          <a class="tile" href="#" aria-label="View work image 2">
+            <img src="./assets/images/work/james-rivera/02.png" alt="Recent tattoo work" loading="lazy" />
+          </a>
+          <a class="tile wide" href="#" aria-label="View work image 3">
+            <img src="./assets/images/work/elena-martinez/01.png" alt="Recent tattoo work" loading="lazy" />
+          </a>
+          <a class="tile" href="#" aria-label="View work image 4">
+            <img src="./assets/images/work/elena-martinez/02.png" alt="Recent tattoo work" loading="lazy" />
+          </a>
+          <a class="tile" href="#" aria-label="View work image 5">
+            <img src="./assets/images/work/artist-03/01.png" alt="Recent tattoo work" loading="lazy" />
+          </a>
+        </div>
+
+        <div class="section-actions">
+          <a class="btn btn-outline" href="/contact/">Ask a question</a>
+          <a class="btn btn-secondary" href="/booking/">Start a custom</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section why">
+      <div class="container">
+        <div class="section-head">
+          <h2>WHY CHOOSE US</h2>
+          <p>Real studio standards — clean work, experienced artists, and an easy path to book.</p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-title">Established</div>
+            <div class="why-value">Since 2004</div>
+          </div>
+
+          <div class="why-card">
+            <div class="why-title">Licensed Artists</div>
+            <div class="why-value">Professional & compliant</div>
+          </div>
+
+          <div class="why-card">
+            <div class="why-title">Clean Environment</div>
+            <div class="why-value">Sterile, safe setup</div>
+          </div>
+
+          <div class="why-card why-highlight">
+            <div class="why-title">Google Reviews</div>
+            <div class="why-value">
+              <a
+                href="https://share.google/sQazjGhLOTfLbEq36"
+                target="_blank"
+                rel="noopener"
+                class="why-link"
+              >
+                4.7★ on Google<br />
+                Read 400+ reviews →
+              </a>
+            </div>
+          </div>
+
+          <div class="why-card">
+            <div class="why-title">Walk-ins</div>
+            <div class="why-value">Welcome daily</div>
+          </div>
+
+          <div class="why-card">
+            <div class="why-title">Payment</div>
+            <div class="why-value">All major cards</div>
+          </div>
+
+          <div class="why-card why-highlight">
+            <div class="why-title">Fresh Work Daily</div>
+            <div class="why-value">
+              <a
+                class="why-link"
+                href="https://www.instagram.com/skin_graphicstattoos/?hl=en"
+                target="_blank"
+                rel="noopener"
+              >
+                @skin_graphicstattoos →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-actions">
+          <a class="btn btn-primary" href="/booking/">Book appointment</a>
+          <a class="btn btn-outline" href="/contact/">Ask a question</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="artists" class="section artists">
+      <div class="container">
+        <div class="section-head">
+          <h2>OUR TEAM</h2>
+          <p>Walk-ins supported daily. Custom work available by appointment.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <a class="card-media" href="/artists/james-rivera/" aria-label="James Rivera artist page">
+              <img src="./assets/images/artists/james-rivera/portrait.png" alt="James Rivera" loading="lazy" />
+            </a>
+            <div class="card-body">
+              <h3>James Rivera</h3>
+              <p class="meta">Black & Grey · 14 years</p>
+              <div class="card-actions">
+                <a class="btn btn-outline" href="/artists/james-rivera/">View work</a>
+                <a class="btn btn-secondary" href="/booking/">Book</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <a class="card-media" href="/artists/elena-martinez/" aria-label="Elena Martinez artist page">
+              <img src="./assets/images/artists/elena-martinez/portrait.png" alt="Elena Martinez" loading="lazy" />
+            </a>
+            <div class="card-body">
+              <h3>Elena Martinez</h3>
+              <p class="meta">Fine line & Script · 9 years</p>
+              <div class="card-actions">
+                <a class="btn btn-outline" href="/artists/elena-martinez/">View work</a>
+                <a class="btn btn-secondary" href="/booking/">Book</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="visit" class="section visit">
+      <div class="container">
+        <div class="section-head">
+          <h2>VISIT THE STUDIO</h2>
+          <p>Easy to find, easy to park. Stop by for walk-ins or schedule ahead.</p>
+        </div>
+
+        <div class="visit-grid">
+          <div class="visit-panel">
+            <div class="visit-block">
+              <div class="label">Address</div>
+              <div class="value">1234 Shopping Center Dr, San Antonio, TX</div>
+            </div>
+
+            <div class="visit-block">
+              <div class="label">Hours</div>
+              <div class="value">Mon–Sat 12PM–8PM · Sun 1PM–6PM</div>
+            </div>
+
+            <div class="visit-block">
+              <div class="label">Phone</div>
+              <div class="value"><a href="tel:2106456738">(210) 645-6738</a></div>
+            </div>
+
+            <div class="visit-actions">
+              <a class="btn btn-primary" href="/booking/">Book appointment</a>
+              <a class="btn btn-secondary" href="tel:2106456738">Call now</a>
+            </div>
+
+            <div>
+              <a
+                href="https://maps.google.com/?q=1234+Shopping+Center+Dr,+San+Antonio,+TX"
+                target="_blank"
+                rel="noopener"
+                class="map-link"
+              >
+                View on Google Maps →
+              </a>
+            </div>
+          </div>
+
+          <div class="visit-media">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3475.0946584860744!2d-98.65103490000001!3d29.426029699999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865c5cafda155555%3A0xc207bd721108343a!2s1255%20SW%20Loop%20410%20suite%20140%2C%20San%20Antonio%2C%20TX%2078227%2C%20USA!5e0!3m2!1sen!2smx!4v1771441590749!5m2!1sen!2smx"
+              width="600"
+              height="450"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-inner">
+        <h2>STOP BY OR SCHEDULE YOUR SESSION.</h2>
+        <div class="cta-actions">
+          <a href="/booking/" class="btn btn-primary">Book appointment</a>
+          <a href="/contact/" class="btn btn-outline">Contact</a>
+        </div>
+      </div>
+    </section>`
+  </main>
+
+  <div class="mobile-cta">
+    <a href="/booking/" class="mobile-cta-btn primary">Book</a>
+    <a href="tel:2106456738" class="mobile-cta-btn secondary">Call</a>
   </div>
-</header>
 
-<section class="hero">
-  <div class="container">
-    <h1>
-      TATTOOS<br>
-      SAN ANTONIO
-    </h1>
-    <div class="divider"></div>
-    <p class="established">Serving the Community Since 2005</p>
-    <p class="walkins">Walk-Ins Welcome Daily · Piercing Available</p>
+  <footer class="site-footer">
+    <div data-include="/partials/footer.html"></div>
+  </footer>
 
-    <div class="hero-actions">
-      <a href="#" class="btn-primary">Book Appointment</a>
-      <a href="tel:2100000000" class="btn-secondary">Call Now</a>
-    </div>
-  </div>
-</section>
-
-<section class="trust-strip">
-  <div class="container">
-    Licensed Artists
-    <span></span>
-    Clean Environment
-    <span></span>
-    Walk-Ins Daily
-    <span></span>
-    Established 2005
-  </div>
-</section>
-
-<section id="work" class="work">
-  <div class="container">
-    <h2>RECENT WORK FROM OUR STUDIO</h2>
-    <div class="grid">
-      <img src="assets/images/t1.jpg" alt="">
-      <img src="assets/images/t2.jpg" alt="">
-      <img src="assets/images/t3.jpg" alt="">
-      <img src="assets/images/t4.jpg" alt="">
-    </div>
-  </div>
-</section>
-
-<section id="artists" class="artists">
-  <div class="container">
-    <h2>OUR TEAM</h2>
-
-    <div class="artist">
-      <h3>James Rivera</h3>
-      <p>Black & Grey · 14 Years Experience</p>
-    </div>
-
-    <div class="artist">
-      <h3>Elena Martinez</h3>
-      <p>Fine Line & Script · 9 Years Experience</p>
-    </div>
-
-  </div>
-</section>
-
-<section id="visit" class="visit">
-  <div class="container">
-    <h2>VISIT THE STUDIO</h2>
-    <p>1234 Shopping Center Dr, San Antonio, TX</p>
-    <p>Mon–Sat 12PM–8PM · Sun 1PM–6PM</p>
-    <p>(210) 000-0000</p>
-  </div>
-</section>
-
-<section class="cta">
-  <div class="container">
-    <h2>STOP BY OR SCHEDULE YOUR SESSION.</h2>
-    <a href="#" class="btn-primary">Book Appointment</a>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="container">
-    <p>Skin Graphics — Serving San Antonio Since 2005</p>
-  </div>
-</footer>
-
+  <script src="./assets/js/include.js"></script>
+  <script src="./assets/js/main.js"></script>
 </body>
 </html>

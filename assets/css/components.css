@@ -1,0 +1,160 @@
+/* --- Micro link button (third CTA) --- */
+.btn.btn-link {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  height: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+  opacity: 0.78;
+  font-weight: 500;
+  text-decoration: none;
+  transform: translateY(1px);
+}
+.btn.btn-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* --- Hero card polish --- */
+.hero-card .label {
+  opacity: 0.6;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+.hero-card .value {
+  font-size: 15px;
+  line-height: 1.35;
+}
+.hero-card .value a {
+  color: inherit;
+  text-decoration: none;
+}
+.hero-card .value a:hover {
+  text-decoration: underline;
+}
+
+.hero-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+.hero-card-cta:hover {
+  text-decoration: underline;
+}
+
+/* Why Choose Us */
+.why {
+  border-top: 1px solid var(--hair);
+  border-bottom: 1px solid var(--hair);
+  background: rgba(20, 20, 20, 0.35);
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.why-card {
+  border: 1px solid var(--hair);
+  background: rgba(20, 20, 20, 0.55);
+  padding: 18px;
+}
+/* Subtle copper hover on Why cards */
+.why-card {
+  transition:
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    transform 220ms ease;
+}
+
+.why-card:hover {
+  border-color: rgba(140, 74, 47, 0.65);
+  box-shadow:
+    0 0 0 1px rgba(140, 74, 47, 0.25),
+    0 10px 30px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Stronger copper emphasis for highlight card */
+.why-highlight {
+  border-color: rgba(140, 74, 47, 0.5);
+}
+
+.why-highlight:hover {
+  background: rgba(184, 115, 51, 0.1);
+  /* border-color: rgba(184, 115, 51, 0.6);*/
+  border-color: var(--copper);
+  box-shadow:
+    0 0 0 1px var(--copper),
+    0 14px 36px rgba(140, 74, 47, 0.25);
+  transform: translateY(-3px);
+}
+
+.why-title {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.72rem;
+  margin-bottom: 8px;
+}
+
+.why-value {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+}
+
+.why-link {
+  text-decoration: none;
+  border-bottom: 1px solid rgba(140, 74, 47, 0.55);
+}
+.why-link:hover {
+  border-bottom-color: var(--copper);
+}
+
+.why-actions {
+  margin-top: 22px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile nav open state */
+@media (max-width: 860px) {
+  .nav {
+    display: none; /* hidden by default on mobile */
+  }
+
+  .nav.is-open {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px;
+    position: absolute;
+    right: 5%;
+    top: 64px;
+    background: rgba(11, 11, 11, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    min-width: 220px;
+    z-index: 60;
+  }
+
+  /* optional: lock scroll when menu is open */
+  body.nav-open {
+    overflow: hidden;
+  }
+}
