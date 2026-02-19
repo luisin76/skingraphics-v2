@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Appointment — Skin Graphics</title>
+    <meta
+      name="description"
+      content="Book your tattoo appointment at Skin Graphics in San Antonio. Walk-ins welcome daily. Custom tattoos available."
+    />
+
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/components.css" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Header include -->
+    <header class="site-header" data-sticky>
+      <div data-include="/partials/header.html"></div>
+    </header>
+
+    <main>
+      <!-- Page Hero -->
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>BOOK YOUR SESSION</h2>
+            <p>
+              Tell us what you’re looking to get. We’ll confirm availability and next steps
+              within 24 hours.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Deposit + Form (unified centered column) -->
+      <section class="section">
+        <div class="container">
+          <div class="booking-wrapper">
+            <div class="deposit-box">
+              <h3>How Booking Works</h3>
+              <p>
+                To secure your appointment, a non-refundable deposit may be required.
+                Deposits go toward the final cost of your tattoo and reserve your artist’s time.
+              </p>
+              <p>
+                Walk-ins are welcome daily based on availability. Custom sessions are confirmed
+                once a deposit is received.
+              </p>
+            </div>
+
+            <form class="booking-form" name="booking" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="booking" />
+
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="booking-name">Full Name</label>
+                  <input id="booking-name" type="text" name="name" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="booking-email">Email</label>
+                  <input id="booking-email" type="email" name="email" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="booking-phone">Phone</label>
+                  <input id="booking-phone" type="tel" name="phone" />
+                </div>
+
+                <div class="form-group">
+                  <label for="booking-artist">Preferred Artist</label>
+                  <select id="booking-artist" name="artist">
+                    <option value="">No preference</option>
+                    <option value="James Rivera">James Rivera</option>
+                    <option value="Elena Martinez">Elena Martinez</option>
+                  </select>
+                </div>
+
+                <div class="form-group full">
+                  <label for="booking-description">Description of Tattoo</label>
+                  <textarea
+                    id="booking-description"
+                    name="description"
+                    rows="5"
+                    required
+                    placeholder="Describe your idea, style, size, and any reference details."
+                  ></textarea>
+                </div>
+
+                <div class="form-group full">
+                  <label for="booking-placement">Placement (where on body?)</label>
+                  <input
+                    id="booking-placement"
+                    type="text"
+                    name="placement"
+                    placeholder="Example: outer forearm, upper arm, ribcage, calf..."
+                  />
+                </div>
+
+                <div class="form-group full">
+                  <label for="booking-availability">Availability</label>
+                  <input
+                    id="booking-availability"
+                    type="text"
+                    name="availability"
+                    placeholder="Example: weekdays after 5pm, Saturdays, flexible..."
+                  />
+                </div>
+
+                <div class="form-group full">
+                  <button type="submit" class="btn btn-primary">Submit Request</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Policies -->
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>WHAT TO EXPECT</h2>
+            <p>
+              We’ll review your request and follow up with availability, pricing guidance,
+              and next steps. A deposit may be required to secure your appointment. Walk-ins
+              are welcome daily based on availability. All clients must present valid ID.
+            </p>
+          </div>
+
+          <div class="section-actions">
+            <a class="btn btn-outline" href="/contact/">Ask a question</a>
+            <a class="btn btn-secondary" href="tel:2106456738">Call the studio</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer include -->
+    <footer class="site-footer">
+      <div data-include="/partials/footer.html"></div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/assets/js/include.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

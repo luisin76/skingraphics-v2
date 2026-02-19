@@ -586,8 +586,75 @@ body{
 .mobile-cta{
   display:none;
 }
+.booking-form {
+  max-width: 720px;
+  margin-top: 28px;
+}
+.booking-wrapper{
+  max-width: 720px;
+  margin: 0 auto;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
 
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group.full {
+  grid-column: span 2;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  background: var(--charcoal);
+  border: 1px solid var(--hair);
+  padding: 12px;
+  color: #fff;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--copper);
+}
+.deposit-box {
+  border: 1px solid var(--hair);
+  background: rgba(20,20,20,0.55);
+  padding: 22px;
+  max-width: 720px;
+}
+
+.deposit-box h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.deposit-box p {
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+/*********************/
 /* Responsive layout */
+/*********************/
+
 @media (max-width: 900px){
   .hero-inner{ grid-template-columns: 1fr; }
   .cards{ grid-template-columns: 1fr; }
@@ -686,3 +753,13 @@ body{
     padding-bottom:60px;
   }
 }
+@media (max-width: 720px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full {
+    grid-column: span 1;
+  }
+}
+
