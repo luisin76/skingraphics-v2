@@ -96,34 +96,23 @@ body{
 
 .nav a:hover{ opacity:1; }
 
+/* Mobile toggle button (supports: <button class="nav-toggle"><span></span><span></span><span></span>) */
 .nav-toggle{
   display:none;
   border:1px solid var(--hair);
   background:transparent;
   padding:10px 12px;
   color:#fff;
+  border-radius:12px;
 }
 
-.nav-toggle-lines{
-  width:18px;
-  height:2px;
-  background:#fff;
+.nav-toggle span{
   display:block;
-  position:relative;
-}
-
-.nav-toggle-lines::before,
-.nav-toggle-lines::after{
-  content:"";
-  position:absolute;
-  left:0;
   width:18px;
   height:2px;
   background:#fff;
+  margin:4px 0;
 }
-
-.nav-toggle-lines::before{ top:-6px; }
-.nav-toggle-lines::after{ top:6px; }
 
 /* Buttons */
 .btn{
@@ -296,7 +285,7 @@ body{
 }
 .hero-card-cta:hover{ color:#fff; }
 
-/* Trust bar (your new one) */
+/* Trust bar */
 .trust-bar {
   border-top: 1px solid var(--hairline);
   border-bottom: 1px solid var(--hairline);
@@ -583,9 +572,11 @@ body{
 }
 
 /* Mobile CTA */
-.mobile-cta{
-  display:none;
-}
+.mobile-cta{ display:none; }
+
+/* ========================= */
+/* Booking form (existing)   */
+/* ========================= */
 .booking-form {
   max-width: 720px;
   margin-top: 28px;
@@ -633,6 +624,7 @@ body{
   outline: none;
   border-color: var(--copper);
 }
+
 .deposit-box {
   border: 1px solid var(--hair);
   background: rgba(20,20,20,0.55);
@@ -651,10 +643,177 @@ body{
   margin-bottom: 10px;
 }
 
+/* ========================= */
+/* Contact page (CORRECTED)  */
+/* IMPORTANT: add class to body: <body class="contact-page"> */
+/* ========================= */
+
+.contact-page .page-hero { padding: 72px 0 28px; }
+.contact-page .page-hero .kicker {
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: 12px;
+  opacity: .75;
+}
+.contact-page .page-hero .lead { max-width: 62ch; }
+
+.contact-page .contact-grid { padding: 28px 0 48px; }
+
+.contact-page .grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 18px;
+}
+@media (max-width: 900px) {
+  .contact-page .grid-2 { grid-template-columns: 1fr; }
+}
+
+/* contact-only card (avoids overriding global .card used elsewhere) */
+.contact-page .c-card{
+  border: 1px solid var(--hairline);
+  background: rgba(20,20,20,0.55);
+  border-radius: 16px;
+  padding: 18px;
+}
+
+/* contact-only divider (avoid overriding hero .divider) */
+.contact-page .c-divider{
+  height: 1px;
+  background: var(--hairline);
+  margin: 16px 0;
+}
+
+.contact-page .contact-list .row{
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 10px;
+  padding: 10px 0;
+}
+.contact-page .contact-list .label{
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  opacity: .7;
+  color: var(--muted);
+}
+.contact-page .contact-list .value{ line-height: 1.4; }
+
+.contact-page .social-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:10px;
+}
+
+.contact-page .chip{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:9px 12px;
+  border-radius:999px;
+  border:1px solid var(--hairline);
+  background: rgba(255,255,255,0.03);
+  transition: background .18s ease, transform .18s ease, border-color .18s ease;
+}
+.contact-page .chip:hover{
+  background: rgba(140,74,47,0.12);
+  border-color: rgba(140,74,47,0.75);
+  transform: translateY(-1px);
+}
+
+/* Contact form scoped so it doesn't fight booking form inputs */
+.contact-page .form{ margin-top:12px; display:grid; gap:12px; }
+
+.contact-page .form-row{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:12px;
+}
+.contact-page .form-row .full{ grid-column:1 / -1; }
+@media (max-width: 860px){
+  .contact-page .form-row{ grid-template-columns:1fr; }
+}
+
+.contact-page .form label span{
+  display:block;
+  font-size:12px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  opacity:.75;
+  margin-bottom:6px;
+  color: var(--muted);
+}
+
+.contact-page .form input,
+.contact-page .form select,
+.contact-page .form textarea{
+  width:100%;
+  padding:12px 12px;
+  border-radius:12px;
+  border:1px solid var(--hair);
+  background: var(--charcoal);
+  color:#fff;
+  font-family: inherit;
+  outline:none;
+}
+
+.contact-page .form input:focus,
+.contact-page .form select:focus,
+.contact-page .form textarea:focus{
+  border-color: var(--copper);
+}
+
+.contact-page .form textarea{ resize:vertical; }
+
+.contact-page .form-actions{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  flex-wrap:wrap;
+  margin-top:6px;
+}
+
+.contact-page .map-section{ padding:0 0 54px; }
+
+.contact-page .map-embed{
+  border-radius:14px;
+  overflow:hidden;
+  border:1px solid var(--hairline);
+  background: var(--charcoal);
+}
+.contact-page .map-embed iframe{ width:100%; height:360px; border:0; }
+
+.contact-page .contact-faq{ padding:10px 0 70px; }
+
+.contact-page .faq-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:12px;
+  margin-top:12px;
+}
+@media (max-width: 900px){
+  .contact-page .faq-grid{ grid-template-columns:1fr; }
+}
+
+.contact-page .faq{
+  border:1px solid var(--hairline);
+  border-radius:14px;
+  padding:12px 14px;
+  background: rgba(255,255,255,0.02);
+}
+.contact-page .faq summary{ cursor:pointer; font-weight:600; }
+.contact-page .faq p{ margin:10px 0 0; opacity:.9; color: rgba(255,255,255,0.85); }
+
+.contact-page .fineprint{
+  font-size:12px;
+  opacity:.75;
+  margin-top:10px;
+  color: var(--muted);
+}
+
 /*********************/
 /* Responsive layout */
 /*********************/
-
 @media (max-width: 900px){
   .hero-inner{ grid-template-columns: 1fr; }
   .cards{ grid-template-columns: 1fr; }
@@ -753,6 +912,7 @@ body{
     padding-bottom:60px;
   }
 }
+
 @media (max-width: 720px) {
   .form-grid {
     grid-template-columns: 1fr;
@@ -762,4 +922,3 @@ body{
     grid-column: span 1;
   }
 }
-
