@@ -163,60 +163,71 @@ document.addEventListener("includes:loaded", initHeaderNav);
 })();
 
 // =======================================
-// Booking: auto-select artist from ?artist=
-// Matches by value, label, or slug
+// Header "Book Appointment" -> "Book with NAME"
+// + keeps href = /booking/?artist=slug
+// Works with injected header partials
 // =======================================
 (function () {
-  const params = new URLSearchParams(window.location.search);
-  const raw = (params.get("artist") || "").trim();
-  if (!raw) return;
-
-  const select =
-    document.getElementById("booking-artist") ||
-    document.querySelector('select[name="artist"]');
-
-  if (!select) return;
-
-  const normalize = (s) =>
-    String(s || "")
+  function slugify(s) {
+    return String(s || "")
       .trim()
-      .toLowerCase();
-
-  const slugify = (s) =>
-    normalize(s)
+      .toLowerCase()
       .replace(/&/g, "and")
       .replace(/[^a-z0-9]+/g, "-")
       .replace(/(^-|-$)/g, "");
+  }
 
-  const target = normalize(raw);
-  const targetSlug = slugify(raw);
+  function toTitle(s) {
+    return String(s || "")
+      .replace(/-/g, " ")
+      .trim()
+      .split(/\s+/)
+      .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+      .join(" ");
+  }
 
-  const options = Array.from(select.options);
+  function apply() {
+    const btn = document.getElementById("header-book-btn");
+    if (!btn) return false;
 
-  const match = options.find((opt) => {
-    const v = normalize(opt.value);
-    const t = normalize(opt.textContent);
-    return (
-      v === target ||
-      t === target ||
-      slugify(opt.value) === targetSlug ||
-      slugify(opt.textContent) === targetSlug
-    );
-  });
+    // Only personalize on artist pages
+    if (!document.body.classList.contains("artist-page")) return true;
 
-if (match) {
-  select.value = match.value;
-  select.classList.add("artist-autoselected");
+    // Prefer explicit body attribute
+    let slug = slugify(document.body.getAttribute("data-artist"));
 
-  select.dispatchEvent(new Event("change", { bubbles: true }));
+    // Fallback: /artists/james-rivera/
+    if (!slug) {
+      const parts = window.location.pathname.split("/").filter(Boolean);
+      if (parts[0] === "artists" && parts[1]) slug = slugify(parts[1]);
+    }
 
-  // Remove highlight after a few seconds
-  setTimeout(() => {
-    select.classList.remove("artist-autoselected");
-  }, 3000);
-}
+    if (!slug) return true;
 
+    // Update link
+    btn.href = `/booking/?artist=${encodeURIComponent(slug)}`;
+
+    // Update label (desktop-friendly)
+    const name = toTitle(slug);
+    btn.textContent = `BOOK WITH ${name}`;
+
+    // Optional: add a class for styling tweaks
+    btn.classList.add("book-with");
+
+    return true;
+  }
+
+  // Try immediately
+  if (apply()) return;
+
+  // Retry if header is injected after JS runs
+  let tries = 0;
+  const timer = setInterval(() => {
+    tries += 1;
+    if (apply() || tries > 20) clearInterval(timer);
+  }, 100);
 })();
+
 
 // =======================================
 // Smooth scroll to booking form if ?artist=
@@ -236,3 +247,8 @@ if (match) {
     });
   }, 200);
 })();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("header-book-btn");
+  if (btn) btn.innerHTML = 'Book with <span class="cta-name">NATE</span>';
+});

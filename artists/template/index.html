@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="/assets/css/components.css" />
   </head>
 
-  <body class="artist-page">
+  <body class="artist-page" data-artist="nate-rivera">
     <!-- shared site header here -->
     <header class="site-header" data-sticky>
       <div data-include="/partials/header.html"></div>
@@ -185,12 +185,7 @@
       </section>
     </main>
 
-    <!-- shared site footer here -->
-
-    <footer class="site-footer">
-      <div data-include="/partials/footer.html"></div>
-    </footer>
-
+    
     <!-- 6) LIGHTBOX (optional) -->
     <div class="lightbox" id="lightbox" aria-hidden="true">
       <button class="lightbox-close" type="button" aria-label="Close image">
@@ -198,6 +193,16 @@
       </button>
       <img class="lightbox-img" alt="" />
     </div>
+    <!--Sticky CTA mobile -->   
+    <div class="mobile-cta">
+      <a href="/booking/" class="mobile-cta-btn primary" id="header-book-btn"> Book with <span class="cta-name">NATE</span></a>
+      <a href="tel:2106456738" class="mobile-cta-btn secondary">Call</a>
+    </div>
+    <!-- shared site footer here -->
+
+    <footer class="site-footer">
+      <div data-include="/partials/footer.html"></div>
+    </footer>
 
     <script src="/assets/js/include.js"></script>
     <script src="/assets/js/main.js" defer></script>
