@@ -44,7 +44,7 @@
       <section class="section">
         <div class="container">
           <div class="booking-wrapper">
-            <div class="deposit-box">
+            <div class="deposit-box" id="booking-form">
               <h3>How Booking Works</h3>
               <p>
                 To secure your appointment, a non-refundable deposit may be
@@ -58,82 +58,91 @@
             </div>
 
             <form
-  class="booking-form"
-  name="booking"
-  method="POST"
-  data-netlify="true"
-  netlify-honeypot="bot-field"
-  action="/booking/"
->
-  <input type="hidden" name="form-name" value="booking" />
-  <input type="hidden" name="redirect" value="/thank-you/" />
+              class="booking-form"
+              name="booking"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              action="/booking/"
+            >
+              <input type="hidden" name="form-name" value="booking" />
+              <input type="hidden" name="redirect" value="/thank-you/" />
 
-  <p style="display: none">
-    <label>Don’t fill this out: <input name="bot-field" /></label>
-  </p>
+              <p style="display: none">
+                <label>Don’t fill this out: <input name="bot-field" /></label>
+              </p>
 
-  <div class="form-grid">
-    <div class="form-group">
-      <label for="booking-name">Full Name</label>
-      <input id="booking-name" type="text" name="name" required />
-    </div>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="booking-name">Full Name</label>
+                  <input id="booking-name" type="text" name="name" required />
+                </div>
 
-    <div class="form-group">
-      <label for="booking-email">Email</label>
-      <input id="booking-email" type="email" name="email" required />
-    </div>
+                <div class="form-group">
+                  <label for="booking-email">Email</label>
+                  <input
+                    id="booking-email"
+                    type="email"
+                    name="email"
+                    required
+                  />
+                </div>
 
-    <div class="form-group">
-      <label for="booking-phone">Phone</label>
-      <input id="booking-phone" type="tel" name="phone" />
-    </div>
+                <div class="form-group">
+                  <label for="booking-phone">Phone</label>
+                  <input id="booking-phone" type="tel" name="phone" />
+                </div>
 
-    <div class="form-group">
-      <label for="booking-artist">Preferred Artist</label>
-      <select id="booking-artist" name="artist">
-        <option value="">No preference</option>
-        <option value="James Rivera">James Rivera</option>
-        <option value="Elena Martinez">Elena Martinez</option>
-      </select>
-    </div>
+                <div class="form-group">
+                  <label for="booking-artist">Preferred Artist</label>
+                  <select id="booking-artist" name="artist">
+                    <option value="">No preference</option>
+                    <option value="James Rivera">James Rivera</option>
+                    <option value="Elena Martinez">Elena Martinez</option>
+                    <option value="Nate">Nate Rivera</option>
+                  </select>
+                </div>
 
-    <div class="form-group full">
-      <label for="booking-description">Description of Tattoo</label>
-      <textarea
-        id="booking-description"
-        name="description"
-        rows="5"
-        required
-        placeholder="Describe your idea, style, size, and any reference details."
-      ></textarea>
-    </div>
+                <div class="form-group full">
+                  <label for="booking-description">Description of Tattoo</label>
+                  <textarea
+                    id="booking-description"
+                    name="description"
+                    rows="5"
+                    required
+                    placeholder="Describe your idea, style, size, and any reference details."
+                  ></textarea>
+                </div>
 
-    <div class="form-group full">
-      <label for="booking-placement">Placement (where on body?)</label>
-      <input
-        id="booking-placement"
-        type="text"
-        name="placement"
-        placeholder="Example: outer forearm, upper arm, ribcage, calf..."
-      />
-    </div>
+                <div class="form-group full">
+                  <label for="booking-placement"
+                    >Placement (where on body?)</label
+                  >
+                  <input
+                    id="booking-placement"
+                    type="text"
+                    name="placement"
+                    placeholder="Example: outer forearm, upper arm, ribcage, calf..."
+                  />
+                </div>
 
-    <div class="form-group full">
-      <label for="booking-availability">Availability</label>
-      <input
-        id="booking-availability"
-        type="text"
-        name="availability"
-        placeholder="Example: weekdays after 5pm, Saturdays, flexible..."
-      />
-    </div>
+                <div class="form-group full">
+                  <label for="booking-availability">Availability</label>
+                  <input
+                    id="booking-availability"
+                    type="text"
+                    name="availability"
+                    placeholder="Example: weekdays after 5pm, Saturdays, flexible..."
+                  />
+                </div>
 
-    <div class="form-group full">
-      <button type="submit" class="btn btn-primary">Submit Request</button>
-    </div>
-  </div>
-</form>
-
+                <div class="form-group full">
+                  <button type="submit" class="btn btn-primary">
+                    Submit Request
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </section>
