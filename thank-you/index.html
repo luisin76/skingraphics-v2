@@ -18,9 +18,8 @@
   </head>
 
   <body>
-    <header class="site-header" data-sticky>
-      <div data-include="/partials/header.html"></div>
-    </header>
+    <!-- Header include (partial already contains .site-header) -->
+    <div data-include="/partials/header.html"></div>
 
     <main>
       <section class="section">
@@ -28,13 +27,17 @@
           <div class="section-head">
             <h2>WE GOT IT.</h2>
             <p>
-              Your request has been received. We’ll review it and follow up within 24 hours
-              with availability and next steps.
+              Your request has been received. We’ll review it and follow up within
+              <strong>24 hours</strong> with availability and next steps.
+            </p>
+            <p style="margin-top: 10px; color: var(--muted); max-width: 60ch;">
+              If you don’t hear back within 24 hours, please call the studio at
+              <a href="tel:2106456738" style="text-decoration: underline;">(210) 645-6738</a>.
             </p>
           </div>
 
           <div class="section-actions">
-            <a class="btn btn-primary" href="/work/">View recent work</a>
+            <a class="btn btn-primary" href="/#work">View recent work</a>
             <a class="btn btn-outline" href="/artists/">Meet the artists</a>
             <a class="btn btn-secondary" href="tel:2106456738">Call the studio</a>
           </div>

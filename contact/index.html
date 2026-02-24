@@ -4,13 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Contact — Skin Graphics</title>
-    <meta name="description" content="Contact Skin Graphics Tattoos & Piercing. Call, text, visit, or send a message." />
+    <meta
+      name="description"
+      content="Contact Skin Graphics Tattoos & Piercing. Call, text, visit, or send a message."
+    />
     <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/components.css" />
   </head>
 
   <body class="contact-page">
     <!-- Header: keep your existing shared header/nav markup -->
-    <header class="site-header">
+     <header class="site-header">
       <div class="container header-row">
         <a class="brand" href="/">
           <span class="brand-mark" aria-hidden="true"></span>
@@ -32,8 +36,8 @@
         </button>
       </div>
 
-      <!-- mobile nav (if you already have it, keep yours; this is safe if you don’t) -->
-      <div class="mobile-nav" id="mobileNav" hidden>
+       <!-- mobile nav (if you already have it, keep yours; this is safe if you don’t)  -->
+       <div class="mobile-nav" id="mobileNav" hidden>
         <div class="container">
           <a href="/#work">Work</a>
           <a href="/artists/">Artists</a>
@@ -41,7 +45,9 @@
           <a class="is-active" href="/contact/">Contact</a>
         </div>
       </div>
-    </header>
+    </header> 
+
+    <!-- <div data-include="/partials/header.html"></div> -->
 
     <main>
       <section class="page-hero">
@@ -49,7 +55,8 @@
           <p class="kicker">Visit • Call • Message</p>
           <h1>Contact Skin Graphics</h1>
           <p class="lead">
-            Walk-ins welcome when available. For fastest response, send a message below or text the studio.
+            Walk-ins welcome when available. For fastest response, send a
+            message below or text the studio.
           </p>
         </div>
       </section>
@@ -65,7 +72,12 @@
                 <div class="label">Address</div>
                 <div class="value">
                   1255 SW Loop 410, Suite 140​ San Antonio, TX 78227<br />
-                  <a class="link" href="https://www.google.com/maps/search/?api=1&query=Skin+Graphics+Tattoos+San+Antonio" target="_blank" rel="noreferrer">
+                  <a
+                    class="link"
+                    href="https://www.google.com/maps/search/?api=1&query=Skin+Graphics+Tattoos+San+Antonio"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     Get directions →
                   </a>
                 </div>
@@ -74,7 +86,9 @@
               <div class="row">
                 <div class="label">Phone</div>
                 <div class="value">
-                  <a class="link" href="tel:+12106456735551234">(210) 645-6738</a><br />
+                  <a class="link" href="tel:+12106456735551234"
+                    >(210) 645-6738</a
+                  ><br />
                   <span class="muted">Call or text</span>
                 </div>
               </div>
@@ -82,7 +96,9 @@
               <div class="row">
                 <div class="label">Email</div>
                 <div class="value">
-                  <a class="link" href="mailto:hello@skingraphics.example">hello@skingraphics.example</a>
+                  <a class="link" href="mailto:hello@skingraphics.example"
+                    >hello@skingraphics.example</a
+                  >
                 </div>
               </div>
 
@@ -90,7 +106,7 @@
                 <div class="label">Hours</div>
                 <div class="value">
                   Mon–Sat 12:30–9<br />
-                  Sun 1–8 
+                  Sun 1–8
                 </div>
               </div>
             </div>
@@ -99,20 +115,41 @@
 
             <h3 class="h4">Social</h3>
             <div class="social-row">
-              <a class="chip" href="https://instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
-              <a class="chip" href="https://facebook.com/" target="_blank" rel="noreferrer">Facebook</a>
-              <a class="chip" href="https://tiktok.com/" target="_blank" rel="noreferrer">TikTok</a>
+              <a
+                class="chip"
+                href="https://instagram.com/"
+                target="_blank"
+                rel="noreferrer"
+                >Instagram</a
+              >
+              <a
+                class="chip"
+                href="https://facebook.com/"
+                target="_blank"
+                rel="noreferrer"
+                >Facebook</a
+              >
+              <a
+                class="chip"
+                href="https://tiktok.com/"
+                target="_blank"
+                rel="noreferrer"
+                >TikTok</a
+              >
             </div>
 
             <p class="fineprint">
-              For deposit questions, large projects, or cover-ups: include reference photos + placement.
+              For deposit questions, large projects, or cover-ups: include
+              reference photos + placement.
             </p>
           </aside>
 
           <!-- Right: message form -->
           <section class="c-card form-card">
             <h2 class="h3">Send a message</h2>
-            <p class="muted">We’ll reply as soon as possible during business hours.</p>
+            <p class="muted">
+              We’ll reply as soon as possible during business hours.
+            </p>
 
             <!-- Netlify form -->
             <form
@@ -136,14 +173,24 @@
 
                 <label>
                   <span>Phone</span>
-                  <input name="phone" type="tel" autocomplete="tel" placeholder="(210) 555-1234" />
+                  <input
+                    name="phone"
+                    type="tel"
+                    autocomplete="tel"
+                    placeholder="(210) 555-1234"
+                  />
                 </label>
               </div>
 
               <div class="form-row">
                 <label class="full">
                   <span>Email</span>
-                  <input name="email" type="email" autocomplete="email" required />
+                  <input
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    required
+                  />
                 </label>
               </div>
 
@@ -165,7 +212,12 @@
               <div class="form-row">
                 <label class="full">
                   <span>Message</span>
-                  <textarea name="message" rows="6" required placeholder="Tell us style, size, placement, and any timing needs."></textarea>
+                  <textarea
+                    name="message"
+                    rows="6"
+                    required
+                    placeholder="Tell us style, size, placement, and any timing needs."
+                  ></textarea>
                 </label>
               </div>
 
@@ -175,7 +227,8 @@
               </div>
 
               <p class="fineprint">
-                By sending this, you agree we may contact you by phone/email. No spam.
+                By sending this, you agree we may contact you by phone/email. No
+                spam.
               </p>
             </form>
           </section>
@@ -187,17 +240,17 @@
           <div class="c-card map-card">
             <div class="map-embed">
               <!-- Replace with your actual Google Maps embed -->
-          <div class="visit-media">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3475.0946584860744!2d-98.65103490000001!3d29.426029699999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865c5cafda155555%3A0xc207bd721108343a!2s1255%20SW%20Loop%20410%20suite%20140%2C%20San%20Antonio%2C%20TX%2078227%2C%20USA!5e0!3m2!1sen!2smx!4v1771441590749!5m2!1sen!2smx"
-              width="600"
-              height="450"
-              style="border:0;"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
+              <div class="visit-media">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3475.0946584860744!2d-98.65103490000001!3d29.426029699999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865c5cafda155555%3A0xc207bd721108343a!2s1255%20SW%20Loop%20410%20suite%20140%2C%20San%20Antonio%2C%20TX%2078227%2C%20USA!5e0!3m2!1sen!2smx!4v1771441590749!5m2!1sen!2smx"
+                  width="600"
+                  height="450"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
@@ -210,22 +263,34 @@
           <div class="faq-grid">
             <details class="faq">
               <summary>Do you take walk-ins?</summary>
-              <p>Yes—when artists are available. For guaranteed time, use the booking page.</p>
+              <p>
+                Yes—when artists are available. For guaranteed time, use the
+                booking page.
+              </p>
             </details>
 
             <details class="faq">
               <summary>Do you require deposits?</summary>
-              <p>Most custom tattoo appointments require a deposit to secure your slot. We’ll confirm details after you reach out.</p>
+              <p>
+                Most custom tattoo appointments require a deposit to secure your
+                slot. We’ll confirm details after you reach out.
+              </p>
             </details>
 
             <details class="faq">
               <summary>What should I include in my message?</summary>
-              <p>Style references, placement, approximate size, and any deadline. If it’s a cover-up, mention what’s underneath.</p>
+              <p>
+                Style references, placement, approximate size, and any deadline.
+                If it’s a cover-up, mention what’s underneath.
+              </p>
             </details>
 
             <details class="faq">
               <summary>Piercing age requirements?</summary>
-              <p>Please bring valid ID. If you’re under 18, requirements depend on the service—message us and we’ll confirm.</p>
+              <p>
+                Please bring valid ID. If you’re under 18, requirements depend
+                on the service—message us and we’ll confirm.
+              </p>
             </details>
           </div>
         </div>
@@ -234,7 +299,9 @@
 
     <footer class="site-footer">
       <div class="container footer-row">
-        <p class="muted">© <span id="year"></span> Skin Graphics. All rights reserved.</p>
+        <p class="muted">
+          © <span id="year"></span> Skin Graphics. All rights reserved.
+        </p>
         <div class="footer-links">
           <a href="/booking/">Book</a>
           <a href="/artists/">Artists</a>
@@ -243,6 +310,7 @@
       </div>
     </footer>
 
+    <script src="./assets/js/include.js"></script>
     <script src="/assets/js/main.js"></script>
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();

@@ -20,11 +20,9 @@
     />
   </head>
 
-  <body>
+  <body class="booking-page">
     <!-- Header include -->
-    <header class="site-header" data-sticky>
-      <div data-include="/partials/header.html"></div>
-    </header>
+    <div data-include="/partials/header.html"></div>
 
     <main>
       <!-- Page Hero -->
@@ -44,7 +42,7 @@
       <section class="section">
         <div class="container">
           <div class="booking-wrapper">
-            <div class="deposit-box" id="booking-form">
+            <div class="deposit-box" id="booking-info">
               <h3>How Booking Works</h3>
               <p>
                 To secure your appointment, a non-refundable deposit may be
@@ -59,14 +57,13 @@
 
             <form
               class="booking-form"
-              name="booking"
+              id="booking-form"
               method="POST"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
-              action="/booking/"
+              novalidate
             >
-              <input type="hidden" name="form-name" value="booking" />
-              <input type="hidden" name="redirect" value="/thank-you/" />
+              <input type="hidden" name="form_source" value="booking" />
+              <input type="hidden" name="page_url" id="page_url" value="" />
+              <input type="hidden" name="submitted_at" id="submitted_at" value="" />
 
               <p style="display: none">
                 <label>Don’t fill this out: <input name="bot-field" /></label>
@@ -178,5 +175,6 @@
     <!-- Scripts -->
     <script src="/assets/js/include.js"></script>
     <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/booking.js"></script>
   </body>
 </html>
